@@ -1,0 +1,48 @@
+{% extends 'base.html' %}
+
+
+{% block content %}
+<style>
+    table, th, td {
+      border: 1px solid black;
+      padding: 5px;
+    }
+    table {
+      border-spacing: 15px;
+    }
+    </style>
+
+<table class="table table-striped">
+
+    <tr>
+        <th colspan="2" >ID  </th>
+        <th colspan="2" >FIRST NAME  </th>
+        <th colspan="2" >LAST NAME  </th>
+        <th colspan="2" >DATE OF BIRTH  </th>
+        <th colspan="2" >EMAIL  </th>
+        <th colspan="2" >CONTACT  </th>
+        <th colspan="2" >DESIGNATION  </th>
+        <th colspan="2" >PROJECTS </th>
+    </tr>
+
+    {% for i in employee %}
+    <tr>
+        <td colspan="2">{{ i.eid }}</td> 
+        <td colspan="2">{{ i.ename }}</td>
+        <td colspan="2">{{ i.lname }}</td>
+        <td colspan="2">{{ i.dob }}</td>
+        <td colspan="2">{{ i.eemail }}</td>
+        <td colspan="2">{{ i.econtact }}</td>
+        <td colspan="2">{{ i.desig }}</td>
+        <td colspan="2"> 
+            <!-- {%if i.eid%} {{i.eid}} {%endif%} -->
+            <br/>{{ i.projects }}
+            </td>
+        <!-- <br/>{% for p in i.pids.all %}{{ e }}<br/>{% endfor %} -->
+        <!-- <td><a href='edit/{{i.id}}'>Edit</a></td>
+        <td><a href='delete/{{i.id}}'>Delete</a></td> -->
+    </tr>
+    {% endfor%}
+</table>
+
+{% endblock %}

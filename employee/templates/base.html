@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Project Management Tool</title>
+    <h1 class="font-weight-bolder align-middle my-5" style="text-align: center;">Project management tool </h1>
+</head>
+  <body>
+  <div class="container">
+    <nav class="navbar navbar-expand-md bg-dark navbar-dark">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="collapsibleNavbar">
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item active">
+        <a class="nav-link" href="/">Home</a>
+        </li>
+      <li class="nav-item active"><a class="nav-link" href="/show">Show All Employees</a></li>
+      <li class="nav-item active"><a class="nav-link" href="/load_form">Add New</a></li>
+      <li class="nav-item active"><a class="nav-link" href="/showproj">Show All Projects</a></li>
+       </ul>
+    <form method="POST" action="search">
+        {% csrf_token %}
+  <br><br>
+      <input name="name" type="search" placeholder="Search an employee" aria-label="Search">
+      <button type="submit">Search Employees</button>
+    </form><br><br>
+    <!-- <form method="POST" action="showproj">
+        {% csrf_token %}
+  <br><br>
+      <input name="name" type="search" placeholder="Search a project" aria-label="SearchProj">
+      <button type="submit">Search Projects</button>
+    </form> -->
+    <!-- <form method="POST" action="selectview">
+      <select name="item_id">
+      {% for em in employee %}
+          <option value="{{ em.ename }}">{{ em.ename }}</option>
+      {% endfor %}
+      </select>
+        <input type="submit" value="Submit">
+      </form> -->
+  </div>
+</nav>
+
+    {% block content %}
+    {% endblock %}
+    </div>
+  </body>
+</html>

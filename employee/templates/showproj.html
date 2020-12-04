@@ -1,0 +1,40 @@
+{% extends 'base.html' %}
+
+
+{% block content %}
+<style>
+    table, th, td {
+      border: 1px solid black;
+      padding: 5px;
+    }
+    table {
+      border-spacing: 15px;
+    }
+    </style>
+
+<table class="table table-striped">
+
+    <tr>
+        <th colspan="2" >PROJECT ID  </th>
+        <th colspan="2" >PROJECT NAME  </th>
+        <th colspan="2" >PROJECT MANAGER </th>
+        <th colspan="2" >START DATE </th>
+        <th colspan="2" >END DATE  </th>
+        <th colspan="2" >EMPLOYEES ON PROJECT </th>
+    </tr>
+
+    {% for i in project %}
+    <tr>
+        <td colspan="2">{{ i.pid }}</td> 
+        <td colspan="2">{{ i.pname }}</td>
+        <td colspan="2">{{ i.pmanager }}</td>
+        <td colspan="2">{{ i.startdate }}</td>
+        <td colspan="2">{{ i.enddate }}</td>
+        <td colspan="2">
+            <br/>{% for e in i.eids.all %}{{ e }}<br/>{% endfor %}
+            </td>
+    </tr>
+    {% endfor%}
+</table>
+
+{% endblock %}

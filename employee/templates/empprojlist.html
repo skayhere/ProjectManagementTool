@@ -1,0 +1,15 @@
+{% block content %}
+<style>
+    table, th, td {
+      border: 1px solid black;
+      padding: 5px;
+    }
+    table {
+      border-spacing: 15px;
+    }
+    </style>
+<table>
+{% for i in employee %}
+<tr><td colspan="2">
+    <br/>{%if project.eids.all == i.eid%}{{ i }}<br/>{% endfor %}</td></tr>
+</table>

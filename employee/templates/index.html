@@ -1,0 +1,35 @@
+{% extends 'base.html' %}
+
+
+{% block content %}
+
+
+<form method="POST" action="add">
+    {% csrf_token %}
+    <div class="form-group">
+
+    <label>Employee ID  :</label>
+    <div>{{ form.eid }}</div>
+    <label>First Name : </label>
+    <div>{{ form.ename }}</div>
+    <label>Last Name : </label>
+    <div>{{ form.lname }}</div>
+    <label>Date of Birth : </label>
+    <div>{{ form.dob }}</div>
+    <label>Email ID : </label>
+    <div>{{ form.eemail }}</div>
+    <label>Contact:</label>
+    <div>{{ form.econtact }}</div>
+    <label>Designation : </label>
+    <div>{{ form.desig }}</div>
+    <label>Projects : </label>
+    <div>{{ form.projects }}</div>
+    <br><br>
+    <button type="submit">Submit</button>
+
+</div>
+
+</form>
+
+
+{% endblock %}

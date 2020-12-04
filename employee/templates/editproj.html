@@ -1,0 +1,51 @@
+{% extends 'base.html' %}
+
+
+{% block content %}
+
+<form method="POST" action="/update/{{ project.id }}">
+
+    {% csrf_token %}
+    <div class="form-group">
+    <table>
+        <tr>
+            <td>
+                <input name="pid" required value="{{ project.pid }}" placeholder="Project Id">
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <input name="pname" required value="{{ project.pname }}" placeholder="Project Name">
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <input name="pmanager" required value="{{ project.pmanager }}" placeholder="Project Manager">
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <input type="date" name="startdate" required value="{{ project.startdate}}" placeholder="yyyy-mm-dd">
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <input type="date" name="enddate" required value="{{ project.enddate}}" placeholder="yyyy-mm-dd">
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <input name="eids" required value="{{ project.eids }}" placeholder="Employee IDs">
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <button type="submit">Update</button>
+            </td>
+        </tr>
+    </table>
+    </div>
+
+</form>
+
+{%endblock%}
