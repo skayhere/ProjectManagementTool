@@ -34,9 +34,9 @@ Admin page functionalities :
   1. CRUD operations on employee table
   2. CRUD operations on project table, select existing employees based on their IDs to assign them to projects, employees can work on multiple projects
   
-Database  : SQLite
-Editor used : Visual studio code
-Branch : Uploaded to master branch
+- Database  : SQLite
+- Editor used : Visual studio code
+- Branch : Uploaded to master branch
   
 To run project : 
   1. python manage.py makemigrations
