@@ -35,4 +35,10 @@ Admin page functionalities :
   2. CRUD operations on project table, select existing employees based on their IDs to assign them to projects, employees can work on multiple projects
   
 Database  : SQLite
+Editor used : Visual studio code
+  
+To run project : 
+  1. python manage.py makemigrations
+  2. python manage.py migrate
+  3. python manage.py runserver
   
