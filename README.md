@@ -36,6 +36,7 @@ Admin page functionalities :
   
 Database  : SQLite
 Editor used : Visual studio code
+Branch : Uploaded to master branch
   
 To run project : 
   1. python manage.py makemigrations
